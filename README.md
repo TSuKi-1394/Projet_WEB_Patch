@@ -4,11 +4,11 @@ Application web full-stack sécurisée développée avec Node.js, Express, React
 
 ## 🎯 Objectifs du Projet
 
-- ✅ Sécuriser le serveur web avec les meilleures pratiques
-- ✅ Conteneuriser tous les services avec Docker
-- ✅ Implémenter une architecture en couches (Services/Contrôleurs)
-- ✅ Établir une connexion sécurisée à la base de données PostgreSQL
-- ✅ Utiliser un ORM (Sequelize) pour prévenir les injections SQL
+- Sécuriser le serveur web avec les meilleures pratiques
+- Conteneuriser tous les services avec Docker
+- Implémenter une architecture en couches (Services/Contrôleurs)
+- Établir une connexion sécurisée à la base de données PostgreSQL
+- Utiliser un ORM (Sequelize) pour prévenir les injections SQL
 
 ## 🏗️ Architecture
 
@@ -32,12 +32,6 @@ Application web full-stack sécurisée développée avec Node.js, Express, React
 ```
 
 ## 🚀 Démarrage Rapide
-
-### Prérequis
-
-- Docker et Docker Compose
-- macOS/Linux : Colima (alternative à Docker Desktop)
-- Au moins 2 GB RAM libre
 
 ### Installation
 
@@ -108,32 +102,32 @@ Projet_WEB_Patch/
 
 ### Protection contre les vulnérabilités OWASP Top 10
 
-- ✅ **Injection SQL** : Sequelize ORM avec requêtes paramétrées
-- ✅ **XSS (Cross-Site Scripting)** : Échappement HTML automatique
-- ✅ **Broken Authentication** : Bcrypt pour hashage des mots de passe (10 rounds)
-- ✅ **Sensitive Data Exposure** : Variables d'environnement, HTTPS recommandé
-- ✅ **XML External Entities (XXE)** : Pas de parsing XML
-- ✅ **Broken Access Control** : Validation des entrées
-- ✅ **Security Misconfiguration** : Helmet pour headers HTTP sécurisés
-- ✅ **CSRF** : CORS configuré avec liste blanche
-- ✅ **Using Components with Known Vulnerabilities** : Dépendances à jour
-- ✅ **Insufficient Logging** : Winston pour logs structurés
+- **Injection SQL** : Sequelize ORM avec requêtes paramétrées
+- **XSS (Cross-Site Scripting)** : Échappement HTML automatique
+- **Broken Authentication** : Bcrypt pour hashage des mots de passe (10 rounds)
+- **Sensitive Data Exposure** : Variables d'environnement, HTTPS recommandé
+- **XML External Entities (XXE)** : Pas de parsing XML
+- **Broken Access Control** : Validation des entrées
+- **Security Misconfiguration** : Helmet pour headers HTTP sécurisés
+- **CSRF** : CORS configuré avec liste blanche
+- **Using Components with Known Vulnerabilities** : Dépendances à jour
+- **Insufficient Logging** : Winston pour logs structurés
 
 ### Middlewares de Sécurité
 
 ```javascript
-✅ Helmet          # En-têtes HTTP sécurisés
-✅ CORS            # Contrôle des origines
-✅ Rate Limiting   # Protection DDoS (100 req/15min)
-✅ Input Validation # express-validator
-✅ Content-Type    # Validation des types MIME
+Helmet          # En-têtes HTTP sécurisés
+CORS            # Contrôle des origines
+Rate Limiting   # Protection DDoS (100 req/15min)
+Input Validation # express-validator
+Content-Type    # Validation des types MIME
 ```
 
 ## 🌐 API Endpoints
 
 ### Utilisateurs
 
-```
+```html
 GET    /users          # Liste des IDs utilisateurs
 GET    /user/:id       # Récupérer un utilisateur
 POST   /user           # Créer un utilisateur
@@ -142,7 +136,7 @@ GET    /populate       # Générer 3 utilisateurs aléatoires
 
 ### Commentaires
 
-```
+```html
 GET    /comments       # Liste des commentaires (DESC)
 POST   /comment        # Créer un commentaire
 DELETE /comment/:id    # Supprimer un commentaire
@@ -150,7 +144,7 @@ DELETE /comment/:id    # Supprimer un commentaire
 
 ### Health Check
 
-```
+```html
 GET    /health         # Statut du serveur
 ```
 
