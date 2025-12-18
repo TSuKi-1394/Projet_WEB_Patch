@@ -179,36 +179,6 @@ curl http://localhost:8000/users
 | **Sécurité** | Helmet 7.1, bcrypt 5.1, express-rate-limit 7.1 |
 | **Infrastructure** | Docker, Docker Compose |
 
-## 🛠️ Développement
-
-### Sans Docker
-
-**Backend:**
-```bash
-cd backend
-npm install
-cp .env.example .env
-npm run dev  # Lance avec nodemon
-```
-
-**Frontend:**
-```bash
-cd frontend/my-app
-npm install
-npm start    # Lance sur port 3000
-```
-
-### Logs
-
-```bash
-# Voir tous les logs
-docker-compose logs -f
-
-# Logs d'un service spécifique
-docker-compose logs -f backend
-docker-compose logs -f database
-```
-
 ## 🔐 Configuration des Secrets
 
 ### ⚠️ AVANT LA PREMIÈRE UTILISATION
@@ -236,84 +206,6 @@ docker-compose logs -f database
 ### ⚠️ NE JAMAIS COMMITER .env
 
 Le fichier `.env` contient des secrets et **NE DOIT JAMAIS** être commité dans Git.
-
-Voir [GIT_BEST_PRACTICES.md](GIT_BEST_PRACTICES.md) pour plus de détails.
-
-## 📚 Documentation
-
-- **[DOCUMENTATION.md](DOCUMENTATION.md)** - Documentation technique complète (1500+ lignes)
-  - Architecture détaillée
-  - Documentation de chaque fichier
-  - Guide d'installation et d'utilisation
-  - API Endpoints
-  - Cahier de tests (39 tests)
-  - Dépannage
-
-- **[GIT_BEST_PRACTICES.md](GIT_BEST_PRACTICES.md)** - Bonnes pratiques Git et sécurité
-  - Ce qui doit/ne doit pas être commité
-  - Configuration .gitignore
-  - Hooks Git de sécurité
-  - Workflow de branches
-
-## 🤝 Contribution
-
-Ce projet est un exemple pédagogique pour le cours de Pentest & OWASP à l'IPSSI.
-
-### Workflow Git
-
-```bash
-# 1. Créer une branche feature
-git checkout -b feature/nom-fonctionnalite
-
-# 2. Développer et commiter
-git add .
-git commit -m "✨ feat: Description"
-
-# 3. Pousser
-git push origin feature/nom-fonctionnalite
-```
-
-### Messages de Commit
-
-```
-✨ feat:     Nouvelle fonctionnalité
-🐛 fix:      Correction de bug
-📝 docs:     Documentation
-♻️  refactor: Refactoring
-✅ test:     Ajout de tests
-🔒 security: Correctif de sécurité
-🐳 docker:   Modifications Docker
-```
-
-## 🐛 Dépannage
-
-### Problème: Port déjà utilisé
-
-```bash
-# Trouver le processus
-lsof -i :8000
-
-# Tuer le processus
-kill -9 <PID>
-```
-
-### Problème: Docker daemon not running
-
-```bash
-# macOS avec Colima
-colima start
-```
-
-### Problème: Connexion PostgreSQL refusée
-
-```bash
-# Redémarrer les services
-docker-compose restart database
-
-# Supprimer les volumes et redémarrer
-docker-compose down -v
-docker-compose up --build
-```
 
 ## 📄 Licence
 
