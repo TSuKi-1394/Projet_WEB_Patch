@@ -154,16 +154,6 @@ DELETE /comment/:id    # Supprimer un commentaire
 GET    /health         # Statut du serveur
 ```
 
-## 🧪 Tests
-
-Voir le cahier de tests complet dans [DOCUMENTATION.md](DOCUMENTATION.md#-cahier-de-tests) avec 39 tests couvrant :
-
-- Tests d'infrastructure Docker
-- Tests de la base de données PostgreSQL
-- Tests des endpoints API
-- Tests de sécurité
-- Tests d'intégration
-
 ### Exécuter les tests manuels
 
 ```bash
