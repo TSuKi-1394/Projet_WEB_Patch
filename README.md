@@ -328,12 +328,3 @@ docker-compose up --build
 ## 📄 Licence
 
 Projet éducatif - IPSSI 2025
-
-## 👥 Auteur
-
-Projet réalisé dans le cadre du cours **Pentest & OWASP - IPSSI S4**
-
----
-
-**Date de création :** 18 décembre 2025  
-**Version :** 1.0.0
