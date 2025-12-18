@@ -1,0 +1,35 @@
+# Fichiers à ignorer par Docker lors de la construction du frontend
+# Réduit la taille de l'image et améliore la sécurité
+
+# Dépendances Node.js (installées dans le conteneur)
+node_modules
+npm-debug.log
+
+# Fichiers de développement
+.git
+.gitignore
+.env
+.env.local
+.env.*.local
+
+# Fichiers de documentation
+README.md
+*.md
+
+# Fichiers de test
+*.test.js
+__tests__
+coverage
+
+# Fichiers IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Fichiers OS
+.DS_Store
+Thumbs.db
+
+# Fichiers de build (générés dans le conteneur)
+build
